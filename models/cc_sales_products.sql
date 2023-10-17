@@ -6,7 +6,7 @@
 
 SELECT 
   product_id
-  ,SUM(quantity) AS qty_91
+  ,IF(product_id LIKE 'LS001%', NULL, SUM(quantity)) AS qty_91
   ,ROUND(SUM(quantity)/91,2) AS avg_daily_qty_91
 FROM `raw_data_circle.raw_cc_sales` 
 WHERE 

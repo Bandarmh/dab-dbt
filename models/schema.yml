@@ -1,0 +1,8 @@
+version: 2
+
+models:
+  - name: cc_sales_products
+    columns:
+      - name: product_id
+        tests:
+          - unique
