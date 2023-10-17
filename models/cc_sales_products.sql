@@ -1,3 +1,9 @@
+{{
+  config(
+    materialized='table'
+  )
+}}
+
 SELECT 
   product_id
   ,SUM(quantity) AS qty_91
